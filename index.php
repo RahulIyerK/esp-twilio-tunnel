@@ -29,7 +29,7 @@
     //send to twilio mms api
 
     //test
-    file_put_contents('message_log.html', "<p>". date("Y-m-d H:i:s") . " , " . $account_sid . " , " . $auth_token . " , " . $twilio_number . " , " . $destination_number . " , " . $message . "</p>");
+    //file_put_contents('message_log.html', "<p>". date("Y-m-d H:i:s") . " , " . $account_sid . " , " . $auth_token . " , " . $twilio_number . " , " . $destination_number . " , " . $message . "</p>");
 
     $client = new Services_Twilio($account_sid, $auth_token);
     $client->account->messages->create(array(
@@ -37,7 +37,7 @@
       "To" => "+1". $destination_number,
       "Body" => $message));
 
-    header( 'Location: https://esptwiliotunnel.000webhostapp.com/message_log.html' ) ;
+    //header( 'Location: https://esptwiliotunnel.000webhostapp.com/message_log.html' ) ;
   }
 
 ?>
